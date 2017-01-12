@@ -1,0 +1,55 @@
+**********************************************************
+*               APACHE LOG ANALYZING                     *
+**********************************************************
+
+
+========== Response Code Statistics =====
+Error Codes: [(404,5),(401,123)]
+Normal Codes: [(200,1272),(302,6)]
+
+========== IP Access More Than 10 times ==========
+195.246.13.119
+216-160-111-121.tukw.qwest.net
+ts05-ip44.hevanet.com
+proxy0.haifa.ac.il
+prxint-sxb3.e-i.net
+cr020r01-3.sac.overture.com
+mail.geovariances.fr
+ip68-228-43-49.tc.ph.cox.net
+128.227.88.79
+208-38-57-205.ip.cal.radiant.net
+ts04-ip92.hevanet.com
+212.92.37.62
+market-mail.panduit.com
+10.0.0.153
+lhr003a.dhl.com
+207.195.59.160
+p213.54.168.132.tisdip.tiscali.de
+64.242.88.10
+ogw.netinfo.bg
+ns.wtbts.org
+200-55-104-193.dsl.prima.net.ar
+pc3-registry-stockholm.telia.net
+203.147.138.233
+h24-70-69-74.ca.shawcable.net
+h24-71-236-129.ca.shawcable.net
+
+========== Top 3 IP Access ==========
+(64.242.88.10,452)
+(10.0.0.153,188)
+(cr020r01-3.sac.overture.com,44)
+
+========== Top 10 Content Access Statistics =====
+(/twiki/bin/view/Main/WebHome,40)
+(/twiki/pub/TWiki/TWikiLogos/twikiRobot46x50.gif,32)
+(/,31)
+(/favicon.ico,28)
+(/robots.txt,27)
+(/razor.html,23)
+(/twiki/bin/view/Main/SpamAssassinTaggingOnly,18)
+(/twiki/bin/view/Main/SpamAssassinAndPostFix,17)
+(/cgi-bin/mailgraph.cgi/mailgraph_0.png,16)
+(/cgi-bin/mailgraph.cgi/mailgraph_2_err.png,16)
+
+========== Content Size Statistics =====
+(Content Size Avg:	%s,7775)

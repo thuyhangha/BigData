@@ -1,0 +1,24 @@
+Instructions
+Q1.
+
+Build inverted index using the "Modified" Algorithm.
+
+Input Split 1 (Doc ID 101) [ cat pat mat sat cat eat ]
+
+Input Split 2 (Doc ID 201)  [ pat mat sat pat mat eat]
+
+Input Split 3 (Doc ID 301) [ sat mat cat pat fat mat]
+
+ 
+
+Assume three Mappers and two Reducers.
+
+Let cat mat and sat be processed by Reducer 1 and rest by Reducer 2.
+
+Q2. 
+
+Consider the following inverted index:
+
+(964, 17), (1488, 63), (2240, 24), (3168, 32)
+
+Compress using VarInt method

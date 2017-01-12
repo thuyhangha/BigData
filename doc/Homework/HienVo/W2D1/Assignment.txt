@@ -1,0 +1,11 @@
+Compute Relative Frequencies
+        Number of Input-Splits: 2
+        Number of Reducers: 1
+        Input Split 0
+        15 91 80 12 19 80
+        17 15 80 18 91 18
+        Input Split 1
+        19 15 80 18 91 18
+        18 15 18 18 80 18
+A. Pair Approach
+B. Stripe Approach

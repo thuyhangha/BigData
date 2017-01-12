@@ -1,0 +1,7 @@
+
+An array is beautiful if it contains exactly 4 consecutive zero at least once
+
+1 2 0 0 0 0 7 0 0 8 9 : Yes
+1 2 0 0 0 0 0 0 2 4 8 : No
+1 2 0 0 7 0 0 0 0 6 3 : Yes
+1 2 0 0 7 6 0 0 0 4 5 : No

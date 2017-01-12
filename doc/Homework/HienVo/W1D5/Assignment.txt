@@ -1,0 +1,19 @@
+Instructions
+Q1. Write an in-mapper combiner algorithm modifying algorithm 3.8 (That is, pairs approach)
+Q2. Write an in-mapper combiner algorithm modifying algorithm 3.9 (That is, stripes approach)
+Q3. Assume that there are two input spits and two reducers. Note that Mapper 1 and Reducer 1 run on the same machine. Mapper 2 and Reducer 2 run on the same machine.
+
+Further, let the partitioner  assign all words less than letter ‘k’ to Reducer 1 and  everything else to Reducer 2.
+
+Input Split 1 : [ {cat mat rat, cat}, {cat  bat cat pat},{cat bat rat bat}]    (Note : 3 records)
+Input Split 2 : [{cat rat bat rat}, {bat mat pat bat}, {pat cat bat mat}]    (Note: 3 records)
+
+Let the neighborhood of X, N(X) be set of all term after X and before the next X.
+Example: Let Data block be [a b c a d e]
+
+N(a) = {b, c}, N(b) = {c, a, d, e}, N(c) = {a, d, e}, N(a) ={d, e}, N(d) = {e}, N(e) = {}.
+
+Illustrate algorithm 3.8.
+Illustrate algorithm 3.8 (with in-mapper combining. That is, apply your algorithm Q1).
+Illustrate algorithm 3.9 
+Illustrate algorithm 3.9 (with in-mapper combining. That is, apply your algorithm Q2).

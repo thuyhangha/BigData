@@ -1,0 +1,35 @@
+Students gained an in-depth understanding of the fundamental concepts of Big Data, 
+ - Hadoop Distributed File System (HDFS)
+ - MapReduce program model, and design-efficient MapReduce algorithms. 
+
+On a practical level, students set up their own single node Hadoop cluster, and created and tested many MapReduce programs in Java. 
+They also learned to use a GUI interface, command line interface and Eclipse IDE to implement many MapReduce programs in Java.
+
+The core handoop project consists of a way to store data, known as the Handoop distributed file system HDFS and a way of process data with MapReduce.
+The key concept is that we split data up and store it accross the collection of machines known as cluster. Then when we process the data, we process it where
+it actually stored rather than retreiving from the central server, the data's already on the cluster, so we can process it in place. You can add more machine to the cluster
+
+Handoop
+	HDFS: Handoop Distributed File System
+	MapReduce: Process data
+		Pig: Write code to analize date using script language, the code is turned into mapreduce 
+		Hive: Just write SQL statement then Hive interpreter turns the SQL to map produce code which then run on the cluster
+		Impala: way to query data whith SQL but which directly accesss the data in HDFS (run faster than HIVE and PIG)
+		sqoop: take data from traditional database, such as Microsoft SQL server, and put it in HDFS, as the limited file. So it can be processed with other data on the cluster
+		
+
+ public static int isPairedN(int[] a, int n) 
+ int isPairedN(int[ ] a, int n){
+
+        if (a.length <= 1 || n > a.length + 1 || n < 0)
+            return 0;
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] + a[j] == n && i + j == n) {
+                    return 1;
+                }
+            }
+        }
+        return 0;
+}

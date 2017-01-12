@@ -1,0 +1,28 @@
+Instructions
+Consider the following inverted index:
+
+(964, 17), (1488, 63), (2240, 24), (3168, 32)
+
+Compress using
+
+(A) VarInt
+Lay so nhi phan cua so can tinh roi chia ra thanh tung khuc 7so, neu la so cuoi thi them 1 thanh 8, else them 0
+(B) Simple 9
+tu so ban dau, align voi so trong table
+n < 2 power k
+30 < 32 = 2 power 5 =>5
+964 < 2 power 14 =>14 (vi sau 9 la 14, sau 14 la 28)
+
+neu la 14 thi number of codes = 2
+neu la 28 thi number of codes = 1
+sau do lay gia tri nhi phan cua so ban dau vi du: 964 = 11111000111
+(C) Bit-Aligned
+ex: 100
+ 100
+- 64 2 power 6
+= 36 = 100100
+
+=>111111 0 100100
+methods.
+
+chicken pot

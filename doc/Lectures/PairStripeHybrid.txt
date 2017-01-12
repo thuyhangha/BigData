@@ -1,0 +1,64 @@
+PAIR APPROACH----------
+
+class Mapper 
+	method Map(docid a; doc d) 
+		for all term w in doc d do 
+			for all term u in Neighbors(w) do 
+				Emit(pair (w; u); count 1)
+				Emit (pair (w; *); count 1)
+				
+class Reducer 
+	total = 0
+	method Reduce(pair p; counts [c1; c2; …]) 
+		s = 0 
+		for all count c in counts [c1; c2; …] do 
+			s = s + c 
+		if (u in pair (w; u) == *)
+			total = s
+		else
+			Emit(pair p; count s/total) 
+
+STRIPE APPROACH----------
+
+class Mapper 
+	method Map(docid a; doc d) 
+		for all term w in doc d do 
+			H = new AssociativeArray 
+			for all term u in Neighbors(w) do 
+				H{u} = H{u} + 1 . //Tally words co-occurring with w 
+			Emit(Term w; Stripe H) 
+			
+class Reducer 
+	method Reduce(term w; stripes [H1;H2;H3; : : :]) 
+		Hf = new AssociativeArray 
+		count = 0
+		for all stripe H in stripes [H1;H2;H3; …] do 
+			count += Sum(Hf; H) 
+		Hf = Hf / count		
+		Emit(w; Hf ) 
+		
+- HYBRID APPROACH----------
+
+class Mapper 
+	method Map(docid a; doc d) 
+		for all term w in doc d do 
+			for all term u in Neighbors(w) do 
+				Emit(pair (w; u); count 1)
+class Reducer
+	method Initialize
+  		tprev = null
+  		H = new AssociativeArray
+  		total = 0
+ 	method Reduce((w,u); counts [c1; c2; ...])
+  		term = w;
+		if (term <> tprev && tprev <> null)
+    		Emit(tpre, H/total)
+			total = 0
+			H = new AssociativeArray
+   			
+  		sum <- Sum (counts [c1; c2; ...])
+  		tprev <- term
+		H{u} += sum
+		total += sum
+ 	method close
+  		Emit(tprev, H/total)
